@@ -1,4 +1,5 @@
 import { AiFillStar } from "react-icons/ai";
+import Course from "./Course";
 const courses = [
   {
     id: 1,
@@ -34,32 +35,7 @@ const CourseList = () => {
     <section className="courseList">
       {courses.map((course) => {
         return (
-          <div className="course" key={course.id}>
-            <img className="courseImage" src={course.imgUrl} alt="image" />
-            <div className="courseDetail">
-              <div className="courseDetail__header">
-                <div className="courseDetail__name-essentials">
-                  <h3 className="courseDetail__name">{course.title}</h3>
-                  <span className="star">
-                    <AiFillStar />
-                    {course.rate}
-                  </span>
-                </div>
-                <p className="couresDetail__descp">{course.description}</p>
-              </div>
-              <div className="courseDetail__footer">
-                <div className="tags">
-                {course.tags.map((tag) => {
-                  return <span className="courseDetail__badge">{tag}</span>;
-                })}
-                </div>
-                <div className="courseDetail__footer-essentials">
-                  <p className="courseDetail__date">{course.date}</p>
-                  <span className="courseDetail__badge">Completed</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Course key={course.id} title={course.title} rate={course.rate} date={course.date} description={course.description} tags={course.tags} imgUrl={course.imgUrl}/>
         );
       })}
     </section>
