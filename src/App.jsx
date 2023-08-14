@@ -1,5 +1,5 @@
 import "./App.css";
-import { AiFillStar } from "react-icons/ai";
+import CourseList from "./components/CourseList";
 const App = () => {
   return (
     <>
@@ -14,92 +14,7 @@ const App = () => {
               <li>Upcoming</li>
             </ul>
           </header>
-          <section className="courseList">
-            <div className="course">
-              <img
-                className="courseImage"
-                src="/images/image-1.jpg"
-                alt="image"
-              />
-              <div className="courseDetail">
-                <div className="courseDetail__header">
-                  <div className="courseDetail__name-essentials">
-                    <h3 className="courseDetail__name">English Lecture</h3>
-                    <span className="star">
-                      <AiFillStar />
-                      4.3
-                    </span>
-                  </div>
-                  <p className="couresDetail__descp">
-                    language lessons with the best teachers
-                  </p>
-                </div>
-                <div className="courseDetail__footer">
-                  <span className="courseDetail__badge">language</span>
-                  <div className="courseDetail__footer-essentials">
-                    <p className="courseDetail__date">Jul 1,2023</p>
-                    <span className="courseDetail__badge">Completed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="course">
-              <img
-                className="courseImage"
-                src="/images/image-2.avif"
-                alt="image"
-              />
-              <div className="courseDetail">
-                <div className="courseDetail__header">
-                  <div className="courseDetail__name-essentials">
-                    <h3 className="courseDetail__name">English Lecture</h3>
-                    <span className="star">
-                      <AiFillStar />
-                      4.3
-                    </span>
-                  </div>
-                  <p className="couresDetail__descp">
-                    language lessons with the best teachers
-                  </p>
-                </div>
-                <div className="courseDetail__footer">
-                  <span className="courseDetail__badge">language</span>
-                  <div className="courseDetail__footer-essentials">
-                    <p className="courseDetail__date">Jul 1,2023</p>
-                    <span className="courseDetail__badge">Completed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="course">
-              <img
-                className="courseImage"
-                src="/images/image-3.png"
-                alt="image"
-              />
-              <div className="courseDetail">
-                <div className="courseDetail__header">
-                  <div className="courseDetail__name-essentials">
-                    <h3 className="courseDetail__name">English Lecture</h3>
-                    <span className="star">
-                      <AiFillStar />
-                      4.3
-                    </span>
-                  </div>
-                  <p className="couresDetail__descp">
-                    language lessons with the best teachers
-                  </p>
-                </div>
-                <div className="courseDetail__footer">
-                  <span className="courseDetail__badge">language</span>
-                  <div className="courseDetail__footer-essentials">
-                    <p className="courseDetail__date">Jul 1,2023</p>
-                    <span className="courseDetail__badge">Completed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <CourseList/>
         </div>
       </div>
     </>
