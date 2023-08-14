@@ -1,34 +1,33 @@
 import { AiFillStar } from "react-icons/ai";
 import Badge from "./Badge";
-const Course = ({ title, rate, description, date, imgUrl, tags }) => {
+const Course = ({ course }) => {
   return (
     <div className="course">
-      <img className="courseImage" src={imgUrl} alt="image" />
+      <img className="courseImage" src={course.imgUrl} alt="image" />
       <div className="courseDetail">
         <div className="courseDetail__header">
           <div className="courseDetail__name-essentials">
-            <h3 className="courseDetail__name">{title}</h3>
+            <h3 className="courseDetail__name">{course.title}</h3>
             <span className="star">
               <AiFillStar />
-              {rate}
+              {course.rate}
             </span>
           </div>
-          <p className="couresDetail__descp">{description}</p>
+          <p className="couresDetail__descp">{course.description}</p>
         </div>
         <div className="courseDetail__footer">
           <div className="tags">
-            {tags.map((tag) => {
-              return <Badge key={tag} tag={tag} />;
-            })}
+            {course.tags.map((tag) => (
+              <Badge key={tag} tag={tag} />
+            ))}
           </div>
           <div className="courseDetail__footer-essentials">
-            <p className="courseDetail__date">{date}</p>
-            <span className="courseDetail__badge">Completed</span>
+            <p className="courseDetail__date">{course.date}</p>
+            <Badge tag={course.status} />
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Course;

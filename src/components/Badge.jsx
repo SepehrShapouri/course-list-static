@@ -1,6 +1,6 @@
 const Badge = ({tag}) => {
     return ( 
-        <span className="courseDetail__badge">{tag}</span>
+        <span className={`courseDetail__badge ${tag === "completed" ? 'completed' : ''}`}>{tag}</span>
      );
 }
  
